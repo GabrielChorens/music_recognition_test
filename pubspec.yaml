@@ -1,0 +1,57 @@
+name: music_test
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+#  sound_stream: ^0.4.1
+#  fftea: ^1.5.0+1
+  pitch_detector_dart:
+  record:
+
+  buffered_list_stream:
+  flutter_bloc:
+  permission_handler:
+#  simple_sheet_music: ^1.0.1
+#  xml: any
+
+  music_notes:
+    git:
+      url: https://github.com/ghost23/music_notes.git
+
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  uses-material-design: true
+
+  fonts:
+    - family: BravuraText
+      fonts:
+        - asset: lib/fonts/BravuraText.otf
+    - family: Bravura
+      fonts:
+        - asset: lib/fonts/Bravura.otf
+  assets:
+    - test.xml
+    - hanon-no1-stripped.musicxml
+    - test_1musescore.mxl
