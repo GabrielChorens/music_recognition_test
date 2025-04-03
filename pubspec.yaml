@@ -16,7 +16,8 @@ dependencies:
   buffered_list_stream:
   flutter_bloc:
   permission_handler:
-#  simple_sheet_music: ^1.0.1
+  rxdart:
+  #  simple_sheet_music: ^1.0.1
 #  xml: any
 
   music_notes:

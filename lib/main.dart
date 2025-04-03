@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:music_notes/graphics/music-line.dart';
-import 'package:music_test/game_cubit.dart';
-import 'package:music_test/game_state.dart';
-import 'package:music_test/score.dart';
+import 'package:music_test/game/game_cubit.dart';
+import 'package:music_test/game/game_state.dart';
+import 'package:music_test/resources/score.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 void main() {
@@ -53,19 +53,7 @@ class _MyAppState extends State<MyApp> {
                   return Colors.white;
                 }(),
                 body: Column(children: [
-                  Center(
-                    child: ConstrainedBox(
-                      constraints:
-                          const BoxConstraints(maxHeight: 200, maxWidth: 370),
-                      child: MusicLine(
-                        options: MusicLineOptions(
-                          x,
-                          36,
-                          3,
-                        ),
-                      ),
-                    ),
-                  ),
+                  Center(child: score),
                   BlocBuilder<GameCubit, GameState>(
                       bloc: gameCubit,
                       builder: (context, state) {

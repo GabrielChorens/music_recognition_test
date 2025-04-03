@@ -60,10 +60,23 @@
 //   return const Color.fromARGB(255, 0, 0, 0);
 // }
 
+import 'package:flutter/material.dart';
+import 'package:music_notes/graphics/music-line.dart';
 import 'package:music_notes/graphics/render-functions/staff.dart';
 import 'package:music_notes/musicXML/data.dart';
 
-final x = Score([
+final score = ConstrainedBox(
+  constraints: const BoxConstraints(maxHeight: 200, maxWidth: 370),
+  child: MusicLine(
+    options: MusicLineOptions(
+      _x,
+      36,
+      3,
+    ),
+  ),
+);
+
+final _x = Score([
   Part([
     Measure([
       Attributes(1, MusicalKey(0, null), 0, [Clef(1, Clefs.G)], Time(4, 4)),
